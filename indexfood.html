@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/9388fb2ff3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <title>Amino-Acid Profiler</title>
+</head>
+<body background="greens.jpg">
+    <div class="container mt-4" width="300" background-color= white>
+        <h1 class="display-4 text-center">
+            <i class="fas fa-utensils"></i> Amino<span class="text-primary">Acid</span>Profiler</h1>
+          <form id="food-form">
+            <div class="">
+              <label for="Food Name">Food Name</label>
+              <input type="text" id="foodName" placeholder="search here"class="form-control">
+              <div id="suggestions" class="suggestions"></div>
+            </div>            
+            <button type="button" id="searchButton" class="btn btn-primary btn-lg btn-block">Search Food</button>           
+            <button type="button" id="clearButton" class="btn btn-primary btn-lg btn-block">Clear</button>
+          </form>
+          <table class="table table-striped mt-5">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Food Name</th>
+                <th>Histidine DV%</th>
+                <th>Isoleucine DV%</th>
+                <th>Leucine DV%</th>
+                <th>Lysine DV%</th>
+                <th>Methionine DV%</th>
+                <th>Phenylalanine DV%</th>
+                <th>Threonine DV%</th>
+                <th>Tryptophan DV%</th>
+                <th>Valine DV%</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="food-item"></tbody>
+          </table>
+          <button type="button" id="searchComplement" class="btn btn-primary btn-lg btn-block">Find Complementary</button>
+          <table class="table table-striped mt-5">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Food Name</th>
+                  <th>Histidine DV%</th>
+                  <th>Isoleucine DV%</th>
+                  <th>Leucine DV%</th>
+                  <th>Lysine DV%</th>
+                  <th>Methionine DV%</th>
+                  <th>Phenylalanine DV%</th>
+                  <th>Threonine DV%</th>
+                  <th>Tryptophan DV%</th>
+                  <th>Valine DV%</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="complimentary-list"></tbody>
+            </table>
+      </div>
+<script
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
+<script src="foodFile.js" ></script>
+<script src="foodsbefore.js"></script>
+</body>
+</html>
+
+<style>
+
+.suggestions {
+  border-top: 2px solid #999;
+}
+.suggestions > div {
+  padding: 15px;
+  font-size: 20px;
+  color: black;
+  border-top: 1px solid #666;
+  cursor: pointer;
+}
+.suggestions > div:hover {
+  background-color: grey;
+}
+div {
+  background-color: white;  
+}
+</style>
